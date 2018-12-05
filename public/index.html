@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-title" content="Church of Cat App">
+    <meta name="application-name" content="Church of Cat App">
+    <link rel="apple-touch-startup-image" href="coclogo.png">
+    <link rel="apple-touch-icon" href="coclogo.png">
+    <link rel="icon" href="coclogo.png">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+
+</head>
+
+<body>
+    <div id="app">
+
+        <div class="indexpage" id="indexid">
+
+            <div class="allindexbuttons">
+                <div class="indexbuttons">
+                    <button class="mainbutton" id="calendarb" @click="showcalendar">Calendar</button>
+                </div>
+                <div class="indexbuttons">
+                    <button class="mainbutton" id="venuesb" @click="showvenues">Venues Info</button>
+                </div>
+                <div class="indexbuttons">
+                    <button class="mainbutton" id="chatb" @click="showchat">Chat</button>
+                </div>
+                <div class="indexbuttons" v-if="!loginstatus">
+                    <button class="mainbutton" id="loginb" @click="login">Log In</button>
+                </div>
+                <div class="indexbuttons" v-if="loginstatus">
+                    <button class="mainbutton" id="logoutb" @click="logout">Log Out</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="generalpage" id="generalid">
+
+            <div class="headerz">
+                <div class="logodiv">
+                    <img class="logo" src="coclogo.png" alt="Church of Cat logo" @click="showindex">Menu
+                </div>
+            </div>
+            <div class="calendarpage" id="calendarb">
+
+
+                <div class="searchgig">
+                    <input type="text" class="searcher" id="gigsearch" placeholder="search by any word: band, free.." @keyup="callinput" autofocus />
+                </div>
+
+                <div class="scheduleperday" id="schedule">
+
+                    <div class="gigs" v-for="(bill, index) in bills" :data-id="index" :data-venue="bill.venuename" :data-price="bill.price">
+                        <button class="btnright" id="pointer" @click="showbill" :data-id="index">
+                            <p class="datevfor" :data-id="index">{{bill.date}}</p>
+                            <h3 class="billnamevfor" :data-id="index">{{bill.billname}}</h3>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="generalpage2" id="generalid2">
+
+            <div class="headerz">
+                <div class="logodiv">
+                    <img class="logo" src="coclogo.png" alt="Church of Cat logo" @click="showindex">Menu
+                </div>
+            </div>
+
+            <div class="venuesmain" id="venuesb">
+                <div class="filterpoint" v-for="(venue, index) in venues" :data-id="index">
+                    <img src="" alt="">
+                    <button class="btnright" id="venuepointer" @click="showvenue" :data-id="index">{{venue.name}}</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="notvariable2" id="notvariable2">
+
+            <div class="headerz">
+                <div class="backbuttonv">
+                    <input type="image" src="styles/backbutton.png" class="backb" @click="showcalendar">
+                </div>
+                <div class="logodiv">
+                    <img class="logo" src="coclogo.png" alt="Church of Cat logo" @click="showindex">Menu
+                </div>
+            </div>
+
+            <div class="bills">
+                <div class="dsbill">
+                    <p id="dbill">{{bill.date}}</p>
+                </div>
+                <div class="bill">
+                    <p>{{bill.billname}}</p>
+                    <p>{{bill.time}}</p>
+                    <p>{{bill.price}}</p>
+                    <p>{{bill.venuename}}</p>
+                    <a :href="bill.eventlink" target="_blank">Go to Facebook event</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="notvariable1" id="notvariable1">
+
+            <div class="headerz">
+                <div class="backbuttonv">
+                    <input type="image" src="styles/backbutton.png" class="backb" @click="showvenues">
+                </div>
+                <div class="logodiv">
+                    <img class="logo" src="coclogo.png" alt="Church of Cat logo" @click="showindex">Menu
+                </div>
+            </div>
+
+            <div class="venueeach">
+                <div class="venuesfilter">
+                    <div v-for="(venue, index) in venues" :data-id="index">
+                        <button class="venuesfilter2" @click="showvenue" :data-id="index">{{venue.name}}</button>
+                    </div>
+                </div>
+
+                <img src="" alt="">
+
+                <div class="venueinfoeach">
+                    <p>{{venue.name}}</p>
+                    <p>{{venue.address}}</p>
+
+                    <iframe :src="venue.map" class="maps">Map</iframe>
+
+                    <a :href="venue.fblink" target="_blank">Go to venue's Facebook</a>
+
+                    <p>{{venue.history}}</p>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="chatroom" id="chatroom">
+
+
+
+            <div class="notlogged" v-if="!loginstatus">
+
+                <div class="headerz">
+                    <div class="logodiv">
+                        <img class="logo" src="coclogo.png" alt="Church of Cat logo" @click="showindex">Menu
+                    </div>
+                </div>
+
+                <p class="plslog">Please,<span class="plzlog " @click="login">&nbsp;log in</span>&nbsp; to use our chat.</p>
+            </div>
+
+            <div class="chatroomz" v-if="loginstatus">
+
+                <div class="headerz">
+                    <div class="logodiv">
+                        <img class="logoim" id="personalim" src="" alt="personalimage" @click="showindex">Menu
+                    </div>
+                </div>
+                <div class="wholechat">
+                    <div class="chatbody" id="chatbody">
+                        <div class="chatmessages" id="chatmessages">
+                        </div>
+                    </div>
+
+                    <input type="writein" class="writein" id="chat" />
+
+                    <button class="sendin" @click="textandscroll">Send </button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyC_5E_iKc07Q_jtnahKvwyXMMKZ23J5WPU",
+            authDomain: "church-of-cat-events-app.firebaseapp.com",
+            databaseURL: "https://church-of-cat-events-app.firebaseio.com",
+            projectId: "church-of-cat-events-app",
+            storageBucket: "church-of-cat-events-app.appspot.com",
+            messagingSenderId: "657040166609"
+        };
+        firebase.initializeApp(config);
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="scripts/code.js"></script>
+
+</body>
+
+</html>

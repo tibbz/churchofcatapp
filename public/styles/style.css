@@ -1,0 +1,3432 @@
+ body {
+     height: 100vh;
+     font-family: helvetica;
+     background-color: black;
+ }
+
+ .indexpage {
+     height: 100vh;
+     display: flex;
+     background-image: url("indexbackground.jpg");
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+ }
+
+ .allindexbuttons {
+     display: flex;
+     width: 100%;
+     flex-direction: column;
+     justify-content: center;
+     padding: 25px;
+ }
+
+ .mainbutton {
+     background: #6e0006;
+     height: 50px;
+     width: 100%;
+     margin-bottom: 15px;
+     color: white;
+     border-radius: 100px;
+     font-size: 20px;
+ }
+
+ .generalpage {
+     height: 100vh;
+     flex-direction: column;
+     background-image: url("generalbackground.jpg");
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     display: none;
+ }
+
+ .generalpage2 {
+     height: 100vh;
+     flex-direction: column;
+     background-image: url("generalbackground.jpg");
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     display: none;
+ }
+
+ .chatroom {
+     height: 100vh;
+     flex-direction: column;
+     background-image: url("generalbackground.jpg");
+     background-size: contain;
+     background-position: center;
+     background-repeat: no-repeat;
+     display: none;
+ }
+
+ .plzlog {
+     color: white;
+     border-radius: 8px;
+     background: #6e0006;
+ }
+
+ .plslog {
+     color: white;
+     display: flex;
+     width: 80%;
+     margin-top: 30px;
+     background: #b9b5b5;
+     border-radius: 50px;
+     padding: 20px;
+ }
+
+ .notlogged {
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     align-items: center;
+ }
+
+ .headerz {
+     display: flex;
+     flex-direction: row;
+     width: 100%;
+     padding: 10px;
+ }
+
+ .chatroomz {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     width: 100%;
+ }
+
+ .wholechat {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     width: 100%;
+     background: #6e000685;
+     border-radius: 50px;
+     padding: 20px;
+ }
+
+ .chatbody {
+     width: 90%;
+     background: #b9b5b5;
+     border-radius: 5px;
+     height: 200px;
+     padding: 10px;
+     overflow-y: scroll;
+ }
+
+ .writein {
+     width: 80%;
+     border-radius: 10px;
+     margin-top: 10px;
+     height: 30px;
+ }
+
+ .sendin {
+     color: white;
+     background: #bab5b5;
+     margin-top: 2px;
+     border-radius: 20px;
+ }
+
+ .chatmessages {
+     display: flex;
+     flex-direction: column;
+ }
+
+ .me {
+     align-self: flex-end;
+     width: 90%;
+     text-align: end;
+     padding-right: 4px;
+     background: #7a2220;
+     color: #fff;
+     border-radius: 5px;
+ }
+
+ .guest {
+     align-self: flex-start;
+     background: #eee;
+     width: 90%;
+     text-align: start;
+     padding-left: 4px;
+     color: black;
+     border-radius: 5px;
+ }
+
+ .logoim {
+     width: 80px;
+     border-radius: 40px;
+ }
+
+ .headerz {
+     display: flex;
+     flex-direction: row;
+     padding: 10px;
+     justify-content: flex-end;
+ }
+
+ .logodiv {
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+     font-size: 15px;
+     background-color: #bab5b5;
+     color: white;
+     border-radius: 20px;
+ }
+
+ .logo {
+     width: 90px;
+ }
+
+ .calendarpage {
+     flex-direction: column;
+ }
+
+ .searchgig {
+     display: flex;
+     justify-content: center;
+ }
+
+ .searcher {
+     width: 80%;
+     height: 30px;
+     margin-bottom: 5px;
+     border-radius: 50px;
+ }
+
+ .checkboxes {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     width: 100%;
+     margin-top: 2px;
+     background: #b9b5b5;
+     border-radius: 20px;
+ }
+
+ .filterv {
+     width: 22px;
+ }
+
+ .scheduleperday {
+     display: flex;
+     flex-direction: column;
+     margin-top: 5px;
+ }
+
+ .datevfor {
+     display: flex;
+     justify-content: flex-start;
+     width: 30%;
+     font-size: 15px;
+     text-align: left;
+ }
+
+ .billnamevfor {
+     display: flex;
+     width: 70%;
+     font-size: 20px;
+     justify-content: center;
+ }
+
+ .gigs {
+     display: flex;
+     justify-content: center;
+     color: white;
+ }
+
+ .venuesmain {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin-top: 30px;
+     color: white;
+ }
+
+ #pointer {
+     width: 90%;
+     position: relative;
+     background: #7a2220;
+     border-radius: 10px;
+     display: flex;
+     font-size: 17px;
+     margin-top: 5px;
+ }
+
+ #venuepointer {
+     width: 250px;
+     height: 80px;
+     position: relative;
+     background: #7a2220;
+     border-radius: 10px;
+     display: flex;
+     justify-content: center;
+     font-size: 25px;
+ }
+
+ #pointer:after {
+     content: "";
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     width: 0;
+     height: 0;
+     border-left: 20px solid transparent;
+     border-top: 20px solid transparent;
+     border-bottom: 20px solid transparent;
+ }
+
+ #venuepointer:after {
+     content: "";
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     width: 0;
+     height: 0;
+     border-left: 20px solid transparent;
+     border-top: 20px solid transparent;
+     border-bottom: 20px solid transparent;
+ }
+
+ #pointer:before {
+     content: "";
+     position: absolute;
+     right: -20px;
+     bottom: 0;
+     width: 0;
+     height: 0;
+     border-left: 20px solid white;
+     border-top: 20px solid transparent;
+     border-bottom: 20px solid transparent;
+ }
+
+ #venuepointer:before {
+     content: "";
+     position: absolute;
+     right: -20px;
+     bottom: 0;
+     width: 0;
+     height: 0;
+     border-left: 20px solid white;
+     border-top: 20px solid transparent;
+     border-bottom: 20px solid transparent;
+ }
+
+ .notvariable2 {
+     display: none;
+     flex-direction: column;
+     height: 100vh;
+     flex-direction: column;
+     background-image: url("generalbackground.jpg");
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+ }
+
+ .notvariable1 {
+     display: none;
+     flex-direction: column;
+     height: 100vh;
+     flex-direction: column;
+     background-image: url("generalbackground.jpg");
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+ }
+
+ .backbutton {
+     display: flex;
+     border-radius: 10px;
+     margin-bottom: 5px;
+     align-self: flex-end;
+     background: #b9b5b5;
+ }
+
+ .backbuttonv {
+     display: flex;
+     justify-content: flex-start;
+     width: 100%;
+ }
+
+ .backb {
+     height: 50px;
+     width: 50px;
+     background: #b9b5b5;
+     border-radius: 25px;
+ }
+
+ .bills {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .dsbill {
+     width: 90%;
+     background: #6e0006;
+     color: white;
+     border-radius: 40px;
+     text-align: center;
+     font-size: 20px;
+ }
+
+ .bill {
+     display: flex;
+     flex-direction: column;
+     width: 95%;
+     align-self: center;
+     margin-top: 10px;
+     text-align: center;
+     background: #b9b5b5;
+     border-radius: 20px;
+     font-size: 20px;
+ }
+
+ .venueeach {
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     align-items: center;
+ }
+
+ .venuesfilter {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     width: 90%;
+
+ }
+
+ .venuesfilter2 {
+     background: #b9b5b5;
+     border-radius: 5px;
+ }
+
+ .venueinfoeach {
+     display: flex;
+     flex-direction: column;
+     width: 90%;
+     align-self: center;
+     margin-top: 10px;
+     text-align: center;
+     background: #b9b5b5;
+     border-radius: 5px;
+ }
+
+ .maps {
+     background: #dcdcdc;
+     border-radius: 5px;
+     height: 300px;
+ }
+
+
+ /*pixel 2XL:*/
+ /*iphone5/ SE:*/
+ @media only screen and (max-width: 320px) and (max-device-height: 568px) {
+     body {
+         height: 100vh;
+         font-family: helvetica;
+         background-color: black;
+     }
+
+     .indexpage {
+         height: 100vh;
+         display: flex;
+         background-image: url("indexbackground.jpg");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+     }
+
+     .allindexbuttons {
+         display: flex;
+         width: 100%;
+         flex-direction: column;
+         justify-content: center;
+         padding: 25px;
+     }
+
+     .mainbutton {
+         background: #6e0006;
+         height: 50px;
+         width: 100%;
+         margin-bottom: 15px;
+         color: white;
+         border-radius: 100px;
+         font-size: 20px;
+     }
+
+     .generalpage {
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         display: none;
+     }
+
+     .generalpage2 {
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         display: none;
+     }
+
+     .chatroom {
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: contain;
+         background-position: center;
+         background-repeat: no-repeat;
+         display: none;
+     }
+
+     .plzlog {
+         color: white;
+         border-radius: 8px;
+         background: #6e0006;
+     }
+
+     .plslog {
+         color: white;
+         display: flex;
+         width: 80%;
+         margin-top: 30px;
+         background: #b9b5b5;
+         border-radius: 50px;
+         padding: 20px;
+     }
+
+     .notlogged {
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+         align-items: center;
+     }
+
+     .headerz {
+         display: flex;
+         flex-direction: row;
+         width: 100%;
+         padding: 10px;
+     }
+
+     .chatroomz {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 100%;
+     }
+
+     .wholechat {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 100%;
+         background: #6e000685;
+         border-radius: 50px;
+         padding: 20px;
+     }
+
+     .chatbody {
+         width: 90%;
+         background: #b9b5b5;
+         border-radius: 5px;
+         height: 200px;
+         padding: 10px;
+         overflow-y: scroll;
+     }
+
+     .writein {
+         width: 80%;
+         border-radius: 10px;
+         margin-top: 10px;
+         height: 30px;
+     }
+
+     .sendin {
+         color: white;
+         background: #bab5b5;
+         margin-top: 2px;
+         border-radius: 20px;
+     }
+
+     .chatmessages {
+         display: flex;
+         flex-direction: column;
+     }
+
+     .me {
+         align-self: flex-end;
+         width: 90%;
+         text-align: end;
+         padding-right: 4px;
+         background: #7a2220;
+         color: #fff;
+         border-radius: 5px;
+     }
+
+     .guest {
+         align-self: flex-start;
+         background: #eee;
+         width: 90%;
+         text-align: start;
+         padding-left: 4px;
+         color: black;
+         border-radius: 5px;
+     }
+
+     .logoim {
+         width: 80px;
+         border-radius: 40px;
+     }
+
+     .headerz {
+         display: flex;
+         flex-direction: row;
+         padding: 10px;
+         justify-content: flex-end;
+     }
+
+     .logodiv {
+         display: flex;
+         flex-direction: column;
+         text-align: center;
+         font-size: 15px;
+         background-color: #bab5b5;
+         color: white;
+         border-radius: 20px;
+     }
+
+     .logo {
+         width: 90px;
+     }
+
+     .calendarpage {
+         flex-direction: column;
+     }
+
+     .searchgig {
+         display: flex;
+         justify-content: center;
+     }
+
+     .searcher {
+         width: 80%;
+         height: 30px;
+         margin-bottom: 5px;
+         border-radius: 50px;
+     }
+
+     .checkboxes {
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         width: 100%;
+         margin-top: 2px;
+         background: #b9b5b5;
+         border-radius: 20px;
+     }
+
+     .filterv {
+         width: 22px;
+     }
+
+     .scheduleperday {
+         display: flex;
+         flex-direction: column;
+         margin-top: 5px;
+     }
+
+     .datevfor {
+         display: flex;
+         justify-content: flex-start;
+         width: 30%;
+         font-size: 15px;
+         text-align: left;
+     }
+
+     .billnamevfor {
+         display: flex;
+         width: 70%;
+         font-size: 20px;
+         justify-content: center;
+     }
+
+     .gigs {
+         display: flex;
+         justify-content: center;
+         color: white;
+     }
+
+     .venuesmain {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         margin-top: 30px;
+         color: white;
+     }
+
+     #pointer {
+         width: 90%;
+         position: relative;
+         background: #7a2220;
+         border-radius: 10px;
+         display: flex;
+         font-size: 17px;
+         margin-top: 5px;
+     }
+
+     #venuepointer {
+         width: 250px;
+         height: 80px;
+         position: relative;
+         background: #7a2220;
+         border-radius: 10px;
+         display: flex;
+         justify-content: center;
+         font-size: 25px;
+     }
+
+     #pointer:after {
+         content: "";
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         width: 0;
+         height: 0;
+         border-left: 20px solid transparent;
+         border-top: 20px solid transparent;
+         border-bottom: 20px solid transparent;
+     }
+
+     #venuepointer:after {
+         content: "";
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         width: 0;
+         height: 0;
+         border-left: 20px solid transparent;
+         border-top: 20px solid transparent;
+         border-bottom: 20px solid transparent;
+     }
+
+     #pointer:before {
+         content: "";
+         position: absolute;
+         right: -20px;
+         bottom: 0;
+         width: 0;
+         height: 0;
+         border-left: 20px solid white;
+         border-top: 20px solid transparent;
+         border-bottom: 20px solid transparent;
+     }
+
+     #venuepointer:before {
+         content: "";
+         position: absolute;
+         right: -20px;
+         bottom: 0;
+         width: 0;
+         height: 0;
+         border-left: 20px solid white;
+         border-top: 20px solid transparent;
+         border-bottom: 20px solid transparent;
+     }
+
+     .notvariable2 {
+         display: none;
+         flex-direction: column;
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+     }
+
+     .notvariable1 {
+         display: none;
+         flex-direction: column;
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+     }
+
+     .backbutton {
+         display: flex;
+         border-radius: 10px;
+         margin-bottom: 5px;
+         align-self: flex-end;
+         background: #b9b5b5;
+     }
+
+     .backbuttonv {
+         display: flex;
+         justify-content: flex-start;
+         width: 100%;
+     }
+
+     .backb {
+         height: 50px;
+         width: 50px;
+         background: #b9b5b5;
+         border-radius: 25px;
+     }
+
+     .bills {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
+
+     .dsbill {
+         width: 90%;
+         background: #6e0006;
+         color: white;
+         border-radius: 40px;
+         text-align: center;
+         font-size: 20px;
+     }
+
+     .bill {
+         display: flex;
+         flex-direction: column;
+         width: 95%;
+         align-self: center;
+         margin-top: 10px;
+         text-align: center;
+         background: #b9b5b5;
+         border-radius: 20px;
+         font-size: 20px;
+     }
+
+     .venueeach {
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+         align-items: center;
+     }
+
+     .venuesfilter {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         width: 90%;
+
+     }
+
+     .venuesfilter2 {
+         background: #b9b5b5;
+         border-radius: 5px;
+     }
+
+     .venueinfoeach {
+         display: flex;
+         flex-direction: column;
+         width: 90%;
+         align-self: center;
+         margin-top: 10px;
+         text-align: center;
+         background: #b9b5b5;
+         border-radius: 5px;
+     }
+
+     .maps {
+         background: #dcdcdc;
+         border-radius: 5px;
+         height: 300px;
+     }
+
+ }
+
+ /*iphone 6/7/8*/
+ @media only screen and (min-width: 375px) and (max-device-height: 667px) {
+     body {
+         height: 100vh;
+         font-family: helvetica;
+         background-color: black;
+     }
+
+     .indexpage {
+         height: 100vh;
+         display: flex;
+         background-image: url("indexbackground.jpg");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+     }
+
+     .allindexbuttons {
+         display: flex;
+         width: 100%;
+         flex-direction: column;
+         justify-content: center;
+         padding: 25px;
+     }
+
+     .mainbutton {
+         background: #6e0006;
+         height: 60px;
+         width: 100%;
+         margin-bottom: 20px;
+         color: white;
+         border-radius: 100px;
+         font-size: 25px;
+     }
+
+     .generalpage {
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         display: none;
+     }
+
+     .generalpage2 {
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         display: none;
+     }
+
+
+     .chatroom {
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: contain;
+         background-position: center;
+         background-repeat: no-repeat;
+         display: none;
+     }
+
+     .plzlog {
+         color: white;
+         border-radius: 8px;
+         background: #6e0006;
+     }
+
+     .plslog {
+         color: white;
+         display: flex;
+         width: 80%;
+         margin-top: 30px;
+         background: #b9b5b5;
+         border-radius: 50px;
+         padding: 20px;
+     }
+
+     .notlogged {
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+         align-items: center;
+     }
+
+     .headerz {
+         display: flex;
+         flex-direction: row;
+         width: 100%;
+         padding: 10px;
+     }
+
+     .chatroomz {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 100%;
+     }
+
+     .wholechat {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 100%;
+         background: #6e000685;
+         border-radius: 50px;
+         padding: 20px;
+     }
+
+     .chatbody {
+         width: 90%;
+         background: #b9b5b5;
+         border-radius: 5px;
+         height: 200px;
+         padding: 10px;
+         overflow-y: scroll;
+     }
+
+     .writein {
+         width: 80%;
+         border-radius: 10px;
+         margin-top: 10px;
+         height: 30px;
+     }
+
+     .sendin {
+         color: white;
+         background: #bab5b5;
+         margin-top: 2px;
+         border-radius: 20px;
+     }
+
+     .chatmessages {
+         display: flex;
+         flex-direction: column;
+     }
+
+     .me {
+         align-self: flex-end;
+         width: 90%;
+         text-align: end;
+         padding-right: 4px;
+         background: #7a2220;
+         color: #fff;
+         border-radius: 5px;
+     }
+
+     .guest {
+         align-self: flex-start;
+         background: #eee;
+         width: 90%;
+         text-align: start;
+         padding-left: 4px;
+         color: black;
+         border-radius: 5px;
+     }
+
+     .logoim {
+         width: 80px;
+         border-radius: 40px;
+     }
+
+     .headerz {
+         display: flex;
+         flex-direction: row;
+         padding: 10px;
+         justify-content: flex-end;
+     }
+
+     .logodiv {
+         display: flex;
+         flex-direction: column;
+         text-align: center;
+         font-size: 15px;
+         background-color: #bab5b5;
+         color: white;
+         border-radius: 20px;
+     }
+
+     .logo {
+         width: 90px;
+     }
+
+     .calendarpage {
+         flex-direction: column;
+     }
+
+     .searchgig {
+         display: flex;
+         justify-content: center;
+     }
+
+     .searcher {
+         width: 80%;
+         height: 30px;
+         margin-bottom: 5px;
+         border-radius: 50px;
+     }
+
+     .checkboxes {
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         width: 100%;
+         margin-top: 2px;
+         background: #b9b5b5;
+         border-radius: 20px;
+     }
+
+     .filterv {
+         width: 22px;
+     }
+
+     .scheduleperday {
+         display: flex;
+         flex-direction: column;
+         margin-top: 5px;
+     }
+
+     .datevfor {
+         display: flex;
+         justify-content: flex-start;
+         width: 30%;
+         font-size: 15px;
+         text-align: left;
+     }
+
+     .billnamevfor {
+         display: flex;
+         width: 70%;
+         font-size: 20px;
+         justify-content: center;
+     }
+
+     .gigs {
+         display: flex;
+         justify-content: center;
+         color: white;
+     }
+
+     .venuesmain {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         margin-top: 30px;
+         color: white;
+     }
+
+     #pointer {
+         width: 90%;
+         position: relative;
+         background: #7a2220;
+         border-radius: 10px;
+         display: flex;
+         font-size: 17px;
+         margin-top: 5px;
+     }
+
+     #venuepointer {
+         width: 300px;
+         height: 80px;
+         position: relative;
+         background: #7a2220;
+         border-radius: 10px;
+         display: flex;
+         justify-content: center;
+         font-size: 25px;
+     }
+
+     #pointer:after {
+         content: "";
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         width: 0;
+         height: 0;
+         border-left: 20px solid transparent;
+         border-top: 20px solid transparent;
+         border-bottom: 20px solid transparent;
+     }
+
+     #venuepointer:after {
+         content: "";
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         width: 0;
+         height: 0;
+         border-left: 20px solid transparent;
+         border-top: 20px solid transparent;
+         border-bottom: 20px solid transparent;
+     }
+
+     #pointer:before {
+         content: "";
+         position: absolute;
+         right: -20px;
+         bottom: 0;
+         width: 0;
+         height: 0;
+         border-left: 20px solid white;
+         border-top: 20px solid transparent;
+         border-bottom: 20px solid transparent;
+     }
+
+     #venuepointer:before {
+         content: "";
+         position: absolute;
+         right: -20px;
+         bottom: 0;
+         width: 0;
+         height: 0;
+         border-left: 20px solid white;
+         border-top: 20px solid transparent;
+         border-bottom: 20px solid transparent;
+     }
+
+     .notvariable2 {
+         display: none;
+         flex-direction: column;
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+     }
+
+     .notvariable1 {
+         display: none;
+         flex-direction: column;
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+     }
+
+     .backbutton {
+         display: flex;
+         border-radius: 10px;
+         margin-bottom: 5px;
+         align-self: flex-end;
+         background: #b9b5b5;
+     }
+
+     .backbuttonv {
+         display: flex;
+         justify-content: flex-start;
+         width: 100%;
+     }
+
+     .backb {
+         height: 50px;
+         width: 50px;
+         background: #b9b5b5;
+         border-radius: 25px;
+     }
+
+     .bills {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
+
+     .dsbill {
+         width: 80%;
+         background: #6e0006;
+         color: white;
+         border-radius: 50px;
+         text-align: center;
+         font-size: 20px;
+     }
+
+     .bill {
+         display: flex;
+         flex-direction: column;
+         width: 90%;
+         align-self: center;
+         margin-top: 10px;
+         text-align: center;
+         background: #b9b5b5;
+         border-radius: 5px;
+         font-size: 15px;
+     }
+
+     .venueeach {
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+         align-items: center;
+     }
+
+     .venuesfilter {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         width: 90%;
+
+     }
+
+     .venuesfilter2 {
+         background: #b9b5b5;
+         border-radius: 5px;
+     }
+
+     .venueinfoeach {
+         display: flex;
+         flex-direction: column;
+         width: 90%;
+         align-self: center;
+         margin-top: 10px;
+         text-align: center;
+         background: #b9b5b5;
+         border-radius: 5px;
+     }
+
+     .maps {
+         background: #dcdcdc;
+         border-radius: 5px;
+     }
+
+ }
+
+ /*iPad:*/
+ @media only screen and (min-width: 768px) and (max-device-height: 1024px) {
+     body {
+         height: 100vh;
+         font-family: helvetica;
+         background-color: black;
+     }
+
+     .indexpage {
+         height: 100vh;
+         display: flex;
+         background-image: url("indexbackground.jpg");
+         background-size: contain;
+         background-repeat: no-repeat;
+     }
+
+     .allindexbuttons {
+         display: flex;
+         width: 100%;
+         flex-direction: column;
+         justify-content: center;
+         padding: 25px;
+     }
+
+     .mainbutton {
+         background: #6e0006;
+         height: 60px;
+         width: 100%;
+         margin-bottom: 30px;
+         color: white;
+         border-radius: 100px;
+         font-size: 40px;
+     }
+
+     .generalpage {
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: contain;
+         background-position: center;
+         background-repeat: no-repeat;
+         display: none;
+     }
+
+     .generalpage2 {
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: contain;
+         background-position: center;
+         background-repeat: no-repeat;
+         display: none;
+     }
+
+
+     .chatroom {
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: contain;
+         background-position: center;
+         background-repeat: no-repeat;
+         display: none;
+     }
+
+     .plzlog {
+         color: white;
+         border-radius: 8px;
+         background: #6e0006;
+     }
+
+     .plslog {
+         color: white;
+         display: flex;
+         width: 80%;
+         margin-top: 30px;
+         background: #b9b5b5;
+         border-radius: 50px;
+         padding: 20px;
+     }
+
+     .notlogged {
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+         align-items: center;
+     }
+
+     .headerz {
+         display: flex;
+         flex-direction: row;
+         width: 100%;
+         padding: 10px;
+     }
+
+     .chatroomz {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 100%;
+     }
+
+     .wholechat {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 100%;
+         background: #6e000685;
+         border-radius: 50px;
+         padding: 20px;
+     }
+
+     .chatbody {
+         width: 90%;
+         background: #b9b5b5;
+         border-radius: 5px;
+         height: 200px;
+         padding: 10px;
+         overflow-y: scroll;
+     }
+
+     .writein {
+         width: 80%;
+         border-radius: 10px;
+         margin-top: 10px;
+         height: 30px;
+     }
+
+     .sendin {
+         color: white;
+         background: #bab5b5;
+         margin-top: 2px;
+         border-radius: 20px;
+     }
+
+     .chatmessages {
+         display: flex;
+         flex-direction: column;
+     }
+
+     .me {
+         align-self: flex-end;
+         width: 90%;
+         text-align: end;
+         padding-right: 4px;
+         background: #7a2220;
+         color: #fff;
+         border-radius: 5px;
+     }
+
+     .guest {
+         align-self: flex-start;
+         background: #eee;
+         width: 90%;
+         text-align: start;
+         padding-left: 4px;
+         color: black;
+         border-radius: 5px;
+     }
+
+     .logoim {
+         width: 80px;
+         border-radius: 40px;
+     }
+
+     .headerz {
+         display: flex;
+         flex-direction: row;
+         padding: 10px;
+         justify-content: flex-end;
+     }
+
+     .logodiv {
+         display: flex;
+         flex-direction: column;
+         text-align: center;
+         font-size: 30px;
+         background-color: #bab5b5;
+         color: white;
+         border-radius: 20px;
+     }
+
+     .logo {
+         width: 200px;
+     }
+
+     .calendarpage {
+         flex-direction: column;
+     }
+
+     .searchgig {
+         display: flex;
+         justify-content: center;
+     }
+
+     .searcher {
+         width: 80%;
+         height: 30px;
+         margin-bottom: 5px;
+         border-radius: 50px;
+     }
+
+     .checkboxes {
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         width: 100%;
+         margin-top: 2px;
+         background: #b9b5b5;
+         border-radius: 20px;
+     }
+
+     .filterv {
+         width: 22px;
+     }
+
+     .scheduleperday {
+         display: flex;
+         flex-direction: column;
+         margin-top: 5px;
+     }
+
+     .datevfor {
+         display: flex;
+         justify-content: flex-start;
+         width: 30%;
+         font-size: 25px;
+         text-align: left;
+     }
+
+     .billnamevfor {
+         display: flex;
+         width: 70%;
+         font-size: 30px;
+         justify-content: center;
+     }
+
+     .gigs {
+         display: flex;
+         justify-content: center;
+         color: white;
+     }
+
+     .venuesmain {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         margin-top: 30px;
+         color: white;
+     }
+
+     #pointer {
+         width: 90%;
+         position: relative;
+         background: #7a2220;
+         border-radius: 10px;
+         display: flex;
+         font-size: 17px;
+         margin-top: 5px;
+     }
+
+     #venuepointer {
+         width: 600px;
+         height: 150px;
+         position: relative;
+         background: #7a2220;
+         border-radius: 10px;
+         display: flex;
+         justify-content: center;
+         font-size: 50px;
+     }
+
+     #pointer:after {
+         content: "";
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         width: 0;
+         height: 0;
+         border-left: 20px solid transparent;
+         border-top: 20px solid transparent;
+         border-bottom: 20px solid transparent;
+     }
+
+     #venuepointer:after {
+         content: "";
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         width: 0;
+         height: 0;
+         border-left: 20px solid transparent;
+         border-top: 20px solid transparent;
+         border-bottom: 20px solid transparent;
+     }
+
+     #pointer:before {
+         content: "";
+         position: absolute;
+         right: -20px;
+         bottom: 0;
+         width: 0;
+         height: 0;
+         border-left: 20px solid white;
+         border-top: 20px solid transparent;
+         border-bottom: 20px solid transparent;
+     }
+
+     #venuepointer:before {
+         content: "";
+         position: absolute;
+         right: -20px;
+         bottom: 0;
+         width: 0;
+         height: 0;
+         border-left: 20px solid white;
+         border-top: 20px solid transparent;
+         border-bottom: 20px solid transparent;
+     }
+
+     .notvariable2 {
+         display: none;
+         flex-direction: column;
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: contain;
+         background-position: center;
+         background-repeat: no-repeat;
+     }
+
+     .notvariable1 {
+         display: none;
+         flex-direction: column;
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: contain;
+         background-position: center;
+         background-repeat: no-repeat;
+     }
+
+     .backbutton {
+         display: flex;
+         border-radius: 10px;
+         margin-bottom: 5px;
+         align-self: flex-end;
+         background: #b9b5b5;
+     }
+
+     .backbuttonv {
+         display: flex;
+         justify-content: flex-start;
+         width: 100%;
+     }
+
+     .backb {
+         height: 100px;
+         width: 100px;
+         background: #b9b5b5;
+         border-radius: 25px;
+     }
+
+     .bills {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
+
+     .dsbill {
+         width: 80%;
+         background: #6e0006;
+         color: white;
+         border-radius: 50px;
+         text-align: center;
+         font-size: 50px;
+     }
+
+     .bill {
+         display: flex;
+         flex-direction: column;
+         width: 90%;
+         align-self: center;
+         margin-top: 10px;
+         text-align: center;
+         background: #b9b5b5;
+         border-radius: 60px;
+         font-size: 45px;
+     }
+
+     .venueeach {
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+         align-items: center;
+     }
+
+     .venuesfilter {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         width: 90%;
+         font-size: 40px;
+
+     }
+
+     .venuesfilter2 {
+         background: #b9b5b5;
+         border-radius: 5px;
+     }
+
+     .venueinfoeach {
+         display: flex;
+         flex-direction: column;
+         width: 90%;
+         align-self: center;
+         margin-top: 20px;
+         text-align: center;
+         background: #b9b5b5;
+         border-radius: 5px;
+         font-size: 30px;
+     }
+
+     .maps {
+         background: #dcdcdc;
+         border-radius: 5px;
+         height: 600px;
+     }
+
+ }
+
+ /*iphone 6/7 plus ?*/
+ @media only screen and (min-width: 414px) and (max-device-height: 736px) {
+     body {
+         height: 100vh;
+         font-family: helvetica;
+         background-color: black;
+     }
+
+     .indexpage {
+         height: 100vh;
+         display: flex;
+         background-image: url("indexbackground.jpg");
+         background-size: contain;
+         background-position: center;
+         background-repeat: no-repeat;
+     }
+
+     .allindexbuttons {
+         display: flex;
+         align-content: center;
+         width: 100%;
+         padding: 25px;
+     }
+
+     .mainbutton {
+         background: #6e0006;
+         height: 70px;
+         width: 100%;
+         color: white;
+         border-radius: 100px;
+         font-size: 30px;
+         display: flex;
+         justify-content: center;
+     }
+
+     .generalpage {
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: contain;
+         background-position: center;
+         background-repeat: no-repeat;
+         display: none;
+     }
+
+     .generalpage2 {
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: contain;
+         background-position: center;
+         background-repeat: no-repeat;
+         display: none;
+     }
+
+
+     .chatroom {
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: contain;
+         background-position: center;
+         background-repeat: no-repeat;
+         display: none;
+     }
+
+     .plzlog {
+         color: white;
+         border-radius: 8px;
+         background: #6e0006;
+     }
+
+     .plslog {
+         color: white;
+         display: flex;
+         width: 80%;
+         margin-top: 30px;
+         background: #b9b5b5;
+         border-radius: 50px;
+         padding: 20px;
+     }
+
+     .notlogged {
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+         align-items: center;
+     }
+
+     .headerz {
+         display: flex;
+         flex-direction: row;
+         width: 100%;
+         padding: 10px;
+     }
+
+     .chatroomz {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 100%;
+     }
+
+     .wholechat {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 100%;
+         background: #6e000685;
+         border-radius: 50px;
+         padding: 20px;
+     }
+
+     .chatbody {
+         width: 90%;
+         background: #b9b5b5;
+         border-radius: 5px;
+         height: 200px;
+         padding: 10px;
+         overflow-y: scroll;
+     }
+
+     .writein {
+         width: 80%;
+         border-radius: 10px;
+         margin-top: 10px;
+         height: 30px;
+     }
+
+     .sendin {
+         color: white;
+         background: #bab5b5;
+         margin-top: 2px;
+         border-radius: 20px;
+     }
+
+     .chatmessages {
+         display: flex;
+         flex-direction: column;
+     }
+
+     .me {
+         align-self: flex-end;
+         width: 90%;
+         text-align: end;
+         padding-right: 4px;
+         background: #7a2220;
+         color: #fff;
+         border-radius: 5px;
+     }
+
+     .guest {
+         align-self: flex-start;
+         background: #eee;
+         width: 90%;
+         text-align: start;
+         padding-left: 4px;
+         color: black;
+         border-radius: 5px;
+     }
+
+     .logoim {
+         width: 80px;
+         border-radius: 40px;
+     }
+
+     .headerz {
+         display: flex;
+         flex-direction: row;
+         padding: 10px;
+         justify-content: flex-end;
+     }
+
+     .logodiv {
+         display: flex;
+         flex-direction: column;
+         text-align: center;
+         font-size: 20px;
+         background-color: #bab5b5;
+         color: white;
+         border-radius: 20px;
+     }
+
+     .logo {
+         width: 100px;
+     }
+
+     .calendarpage {
+         flex-direction: column;
+     }
+
+     .searchgig {
+         display: flex;
+         justify-content: center;
+     }
+
+     .searcher {
+         width: 80%;
+         height: 30px;
+         margin-bottom: 5px;
+         border-radius: 50px;
+     }
+
+     .checkboxes {
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         width: 100%;
+         margin-top: 2px;
+         background: #b9b5b5;
+         border-radius: 20px;
+     }
+
+     .filterv {
+         width: 22px;
+     }
+
+     .scheduleperday {
+         display: flex;
+         flex-direction: column;
+         margin-top: 5px;
+     }
+
+     .datevfor {
+         display: flex;
+         justify-content: flex-start;
+         width: 30%;
+         font-size: 20px;
+         text-align: left;
+     }
+
+     .billnamevfor {
+         display: flex;
+         width: 70%;
+         font-size: 30px;
+         justify-content: center;
+     }
+
+     .gigs {
+         display: flex;
+         justify-content: center;
+         color: white;
+     }
+
+     .venuesmain {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         margin-top: 30px;
+         color: white;
+     }
+
+     #pointer {
+         width: 85%;
+         position: relative;
+         background: #7a2220;
+         border-radius: 10px;
+         display: flex;
+         font-size: 17px;
+         margin-top: 20px;
+     }
+
+     #venuepointer {
+         width: 300px;
+         height: 120px;
+         position: relative;
+         background: #7a2220;
+         border-radius: 10px;
+         display: flex;
+         justify-content: center;
+         font-size: 35px;
+     }
+
+     #pointer:after {
+         content: "";
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         width: 0;
+         height: 0;
+         border-left: 20px solid transparent;
+         border-top: 20px solid transparent;
+         border-bottom: 20px solid transparent;
+     }
+
+     #venuepointer:after {
+         content: "";
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         width: 0;
+         height: 0;
+         border-left: 20px solid transparent;
+         border-top: 20px solid transparent;
+         border-bottom: 20px solid transparent;
+     }
+
+     #pointer:before {
+         content: "";
+         position: absolute;
+         right: -20px;
+         bottom: 0;
+         width: 0;
+         height: 0;
+         border-left: 20px solid white;
+         border-top: 20px solid transparent;
+         border-bottom: 20px solid transparent;
+     }
+
+     #venuepointer:before {
+         content: "";
+         position: absolute;
+         right: -20px;
+         bottom: 0;
+         width: 0;
+         height: 0;
+         border-left: 20px solid white;
+         border-top: 20px solid transparent;
+         border-bottom: 20px solid transparent;
+     }
+
+     .notvariable2 {
+         display: none;
+         flex-direction: column;
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: contain;
+         background-position: center;
+         background-repeat: no-repeat;
+     }
+
+     .notvariable1 {
+         display: none;
+         flex-direction: column;
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: contain;
+         background-position: center;
+         background-repeat: no-repeat;
+     }
+
+     .backbutton {
+         display: flex;
+         border-radius: 10px;
+         margin-bottom: 5px;
+         align-self: flex-end;
+         background: #b9b5b5;
+     }
+
+     .backbuttonv {
+         display: flex;
+         justify-content: flex-start;
+         width: 100%;
+     }
+
+     .backb {
+         height: 80px;
+         width: 80px;
+         background: #b9b5b5;
+         border-radius: 25px;
+     }
+
+     .bills {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
+
+     .dsbill {
+         width: 80%;
+         background: #6e0006;
+         color: white;
+         border-radius: 50px;
+         text-align: center;
+         font-size: 20px;
+     }
+
+     .bill {
+         display: flex;
+         flex-direction: column;
+         width: 80%;
+         align-self: center;
+         margin-top: 10px;
+         text-align: center;
+         background: #b9b5b5;
+         border-radius: 5px;
+         font-size: 20px;
+     }
+
+     .venueeach {
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+         align-items: center;
+     }
+
+     .venuesfilter {
+         display: flex;
+         flex-direction: row;
+         font-size: 20px;
+
+     }
+
+     .venuesfilter2 {
+         background: #b9b5b5;
+         border-radius: 5px;
+     }
+
+     .venueinfoeach {
+         display: flex;
+         flex-direction: column;
+         width: 90%;
+         align-self: center;
+         margin-top: 10px;
+         text-align: center;
+         background: #b9b5b5;
+         border-radius: 5px;
+         font-size: 20px;
+     }
+
+     .maps {
+         background: #dcdcdc;
+         border-radius: 5px;
+     }
+
+ }
+
+ /*iphone 6/7/8 landscape*/
+ @media only screen and (max-width: 667px) and (max-device-height: 375px) {
+     body {
+         height: 100vh;
+         font-family: helvetica;
+         background-color: black;
+     }
+
+     .indexpage {
+         height: 100vh;
+         display: flex;
+         background-image: url("indexbackground.jpg");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+     }
+
+     .allindexbuttons {
+         display: flex;
+         width: 100%;
+         flex-direction: column;
+         justify-content: center;
+         padding: 25px;
+     }
+
+     .mainbutton {
+         background: #6e0006;
+         height: 60px;
+         width: 100%;
+         margin-bottom: 20px;
+         color: white;
+         border-radius: 100px;
+         font-size: 25px;
+     }
+
+     .generalpage {
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         display: none;
+     }
+
+     .generalpage2 {
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         display: none;
+     }
+
+
+     .chatroom {
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: contain;
+         background-position: center;
+         background-repeat: no-repeat;
+         display: none;
+     }
+
+     .plzlog {
+         color: white;
+         border-radius: 8px;
+         background: #6e0006;
+     }
+
+     .plslog {
+         color: white;
+         display: flex;
+         width: 80%;
+         margin-top: 30px;
+         background: #b9b5b5;
+         border-radius: 50px;
+         padding: 20px;
+     }
+
+     .notlogged {
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+         align-items: center;
+     }
+
+     .headerz {
+         display: flex;
+         flex-direction: row;
+         width: 100%;
+         padding: 10px;
+     }
+
+     .chatroomz {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 100%;
+     }
+
+     .wholechat {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 100%;
+         background: #6e000685;
+         border-radius: 50px;
+         padding: 20px;
+     }
+
+     .chatbody {
+         width: 90%;
+         background: #b9b5b5;
+         border-radius: 5px;
+         height: 200px;
+         padding: 10px;
+         overflow-y: scroll;
+     }
+
+     .writein {
+         width: 80%;
+         border-radius: 10px;
+         margin-top: 10px;
+         height: 30px;
+     }
+
+     .sendin {
+         color: white;
+         background: #bab5b5;
+         margin-top: 2px;
+         border-radius: 20px;
+     }
+
+     .chatmessages {
+         display: flex;
+         flex-direction: column;
+     }
+
+     .me {
+         align-self: flex-end;
+         width: 90%;
+         text-align: end;
+         padding-right: 4px;
+         background: #7a2220;
+         color: #fff;
+         border-radius: 5px;
+     }
+
+     .guest {
+         align-self: flex-start;
+         background: #eee;
+         width: 90%;
+         text-align: start;
+         padding-left: 4px;
+         color: black;
+         border-radius: 5px;
+     }
+
+     .logoim {
+         width: 80px;
+         border-radius: 40px;
+     }
+
+     .headerz {
+         display: flex;
+         flex-direction: row;
+         padding: 10px;
+         justify-content: flex-end;
+     }
+
+     .logodiv {
+         display: flex;
+         flex-direction: column;
+         text-align: center;
+         font-size: 15px;
+         background-color: #bab5b5;
+         color: white;
+         border-radius: 20px;
+     }
+
+     .logo {
+         width: 90px;
+     }
+
+     .calendarpage {
+         flex-direction: column;
+     }
+
+     .searchgig {
+         display: flex;
+         justify-content: center;
+     }
+
+     .searcher {
+         width: 80%;
+         height: 30px;
+         margin-bottom: 5px;
+         border-radius: 50px;
+     }
+
+     .checkboxes {
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         width: 100%;
+         margin-top: 2px;
+         background: #b9b5b5;
+         border-radius: 20px;
+     }
+
+     .filterv {
+         width: 22px;
+     }
+
+     .scheduleperday {
+         display: flex;
+         flex-direction: column;
+         margin-top: 5px;
+     }
+
+     .datevfor {
+         display: flex;
+         justify-content: flex-start;
+         width: 30%;
+         font-size: 15px;
+         text-align: left;
+     }
+
+     .billnamevfor {
+         display: flex;
+         width: 70%;
+         font-size: 20px;
+         justify-content: center;
+     }
+
+     .gigs {
+         display: flex;
+         justify-content: center;
+         color: white;
+     }
+
+     .venuesmain {
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         justify-content: space-between;
+         color: white;
+     }
+
+     #pointer {
+         width: 80%;
+         position: relative;
+         background: #7a2220;
+         border-radius: 10px;
+         display: flex;
+         font-size: 17px;
+         margin-top: 5px;
+
+     }
+
+     #venuepointer {
+         width: 180px;
+         height: 80px;
+         position: relative;
+         background: #7a2220;
+         border-radius: 10px;
+         display: flex;
+         justify-content: center;
+         font-size: 25px;
+         margin-right: 25px;
+     }
+
+     #pointer:after {
+         content: "";
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         width: 0;
+         height: 0;
+         border-left: 20px solid transparent;
+         border-top: 20px solid transparent;
+         border-bottom: 20px solid transparent;
+     }
+
+     #venuepointer:after {
+         content: "";
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         width: 0;
+         height: 0;
+         border-left: 20px solid transparent;
+         border-top: 20px solid transparent;
+         border-bottom: 20px solid transparent;
+     }
+
+     #pointer:before {
+         content: "";
+         position: absolute;
+         right: -20px;
+         bottom: 0;
+         width: 0;
+         height: 0;
+         border-left: 20px solid white;
+         border-top: 20px solid transparent;
+         border-bottom: 20px solid transparent;
+     }
+
+     #venuepointer:before {
+         content: "";
+         position: absolute;
+         right: -20px;
+         bottom: 0;
+         width: 0;
+         height: 0;
+         border-left: 20px solid white;
+         border-top: 20px solid transparent;
+         border-bottom: 20px solid transparent;
+     }
+
+     .notvariable2 {
+         display: none;
+         flex-direction: column;
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+     }
+
+     .notvariable1 {
+         display: none;
+         flex-direction: column;
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+     }
+
+     .backbutton {
+         display: flex;
+         border-radius: 10px;
+         margin-bottom: 5px;
+         align-self: flex-end;
+         background: #b9b5b5;
+     }
+
+     .backbuttonv {
+         display: flex;
+         justify-content: flex-start;
+         width: 100%;
+     }
+
+     .backb {
+         height: 50px;
+         width: 50px;
+         background: #b9b5b5;
+         border-radius: 25px;
+     }
+
+     .bills {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
+
+     .dsbill {
+         width: 80%;
+         background: #6e0006;
+         color: white;
+         border-radius: 50px;
+         text-align: center;
+         font-size: 20px;
+     }
+
+     .bill {
+         display: flex;
+         flex-direction: column;
+         width: 90%;
+         align-self: center;
+         margin-top: 10px;
+         text-align: center;
+         background: #b9b5b5;
+         border-radius: 5px;
+         font-size: 15px;
+     }
+
+     .venueeach {
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+         align-items: center;
+     }
+
+     .venuesfilter {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         width: 90%;
+
+     }
+
+     .venuesfilter2 {
+         background: #b9b5b5;
+         border-radius: 5px;
+     }
+
+     .venueinfoeach {
+         display: flex;
+         flex-direction: column;
+         width: 90%;
+         align-self: center;
+         margin-top: 10px;
+         text-align: center;
+         background: #b9b5b5;
+         border-radius: 5px;
+     }
+
+     .maps {
+         background: #dcdcdc;
+         border-radius: 5px;
+     }
+ }
+
+ /*iphone 6/7/8 plus landscape*/
+ @media only screen and (max-width: 736px) and (max-device-height: 414px) {
+     body {
+         height: 100vh;
+         font-family: helvetica;
+         background-color: black;
+     }
+
+     .indexpage {
+         height: 100vh;
+         display: flex;
+         background-image: url("indexbackground.jpg");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+     }
+
+     .allindexbuttons {
+         display: flex;
+         width: 100%;
+         flex-direction: column;
+         justify-content: center;
+         padding: 25px;
+     }
+
+     .mainbutton {
+         background: #6e0006;
+         height: 60px;
+         width: 100%;
+         margin-bottom: 20px;
+         color: white;
+         border-radius: 100px;
+         font-size: 25px;
+     }
+
+     .generalpage {
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         display: none;
+     }
+
+     .generalpage2 {
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         display: none;
+     }
+
+
+     .chatroom {
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: contain;
+         background-position: center;
+         background-repeat: no-repeat;
+         display: none;
+     }
+
+     .plzlog {
+         color: white;
+         border-radius: 8px;
+         background: #6e0006;
+     }
+
+     .plslog {
+         color: white;
+         display: flex;
+         width: 80%;
+         margin-top: 30px;
+         background: #b9b5b5;
+         border-radius: 50px;
+         padding: 20px;
+     }
+
+     .notlogged {
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+         align-items: center;
+     }
+
+     .headerz {
+         display: flex;
+         flex-direction: row;
+         width: 100%;
+         padding: 10px;
+     }
+
+     .chatroomz {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 100%;
+     }
+
+     .wholechat {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 100%;
+         background: #6e000685;
+         border-radius: 50px;
+         padding: 20px;
+     }
+
+     .chatbody {
+         width: 90%;
+         background: #b9b5b5;
+         border-radius: 5px;
+         height: 200px;
+         padding: 10px;
+         overflow-y: scroll;
+     }
+
+     .writein {
+         width: 80%;
+         border-radius: 10px;
+         margin-top: 10px;
+         height: 30px;
+     }
+
+     .sendin {
+         color: white;
+         background: #bab5b5;
+         margin-top: 2px;
+         border-radius: 20px;
+     }
+
+     .chatmessages {
+         display: flex;
+         flex-direction: column;
+     }
+
+     .me {
+         align-self: flex-end;
+         width: 90%;
+         text-align: end;
+         padding-right: 4px;
+         background: #7a2220;
+         color: #fff;
+         border-radius: 5px;
+     }
+
+     .guest {
+         align-self: flex-start;
+         background: #eee;
+         width: 90%;
+         text-align: start;
+         padding-left: 4px;
+         color: black;
+         border-radius: 5px;
+     }
+
+     .logoim {
+         width: 80px;
+         border-radius: 40px;
+     }
+
+     .headerz {
+         display: flex;
+         flex-direction: row;
+         padding: 10px;
+         justify-content: flex-end;
+     }
+
+     .logodiv {
+         display: flex;
+         flex-direction: column;
+         text-align: center;
+         font-size: 15px;
+         background-color: #bab5b5;
+         color: white;
+         border-radius: 20px;
+     }
+
+     .logo {
+         width: 90px;
+     }
+
+     .calendarpage {
+         flex-direction: column;
+     }
+
+     .searchgig {
+         display: flex;
+         justify-content: center;
+     }
+
+     .searcher {
+         width: 80%;
+         height: 30px;
+         margin-bottom: 5px;
+         border-radius: 50px;
+     }
+
+     .checkboxes {
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         width: 100%;
+         margin-top: 2px;
+         background: #b9b5b5;
+         border-radius: 20px;
+     }
+
+     .filterv {
+         width: 22px;
+     }
+
+     .scheduleperday {
+         display: flex;
+         flex-direction: column;
+         margin-top: 5px;
+     }
+
+     .datevfor {
+         display: flex;
+         justify-content: flex-start;
+         width: 30%;
+         font-size: 15px;
+         text-align: left;
+     }
+
+     .billnamevfor {
+         display: flex;
+         width: 70%;
+         font-size: 20px;
+         justify-content: center;
+     }
+
+     .gigs {
+         display: flex;
+         justify-content: center;
+         color: white;
+     }
+
+     .venuesmain {
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         justify-content: space-between;
+         color: white;
+     }
+
+     #pointer {
+         width: 80%;
+         position: relative;
+         background: #7a2220;
+         border-radius: 10px;
+         display: flex;
+         font-size: 17px;
+         margin-top: 5px;
+
+     }
+
+     #venuepointer {
+         width: 180px;
+         height: 80px;
+         position: relative;
+         background: #7a2220;
+         border-radius: 10px;
+         display: flex;
+         justify-content: center;
+         font-size: 25px;
+         margin-right: 25px;
+     }
+
+     #pointer:after {
+         content: "";
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         width: 0;
+         height: 0;
+         border-left: 20px solid transparent;
+         border-top: 20px solid transparent;
+         border-bottom: 20px solid transparent;
+     }
+
+     #venuepointer:after {
+         content: "";
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         width: 0;
+         height: 0;
+         border-left: 20px solid transparent;
+         border-top: 20px solid transparent;
+         border-bottom: 20px solid transparent;
+     }
+
+     #pointer:before {
+         content: "";
+         position: absolute;
+         right: -20px;
+         bottom: 0;
+         width: 0;
+         height: 0;
+         border-left: 20px solid white;
+         border-top: 20px solid transparent;
+         border-bottom: 20px solid transparent;
+     }
+
+     #venuepointer:before {
+         content: "";
+         position: absolute;
+         right: -20px;
+         bottom: 0;
+         width: 0;
+         height: 0;
+         border-left: 20px solid white;
+         border-top: 20px solid transparent;
+         border-bottom: 20px solid transparent;
+     }
+
+     .notvariable2 {
+         display: none;
+         flex-direction: column;
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+     }
+
+     .notvariable1 {
+         display: none;
+         flex-direction: column;
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+     }
+
+     .backbutton {
+         display: flex;
+         border-radius: 10px;
+         margin-bottom: 5px;
+         align-self: flex-end;
+         background: #b9b5b5;
+     }
+
+     .backbuttonv {
+         display: flex;
+         justify-content: flex-start;
+         width: 100%;
+     }
+
+     .backb {
+         height: 50px;
+         width: 50px;
+         background: #b9b5b5;
+         border-radius: 25px;
+     }
+
+     .bills {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
+
+     .dsbill {
+         width: 80%;
+         background: #6e0006;
+         color: white;
+         border-radius: 50px;
+         text-align: center;
+         font-size: 20px;
+     }
+
+     .bill {
+         display: flex;
+         flex-direction: column;
+         width: 90%;
+         align-self: center;
+         margin-top: 10px;
+         text-align: center;
+         background: #b9b5b5;
+         border-radius: 5px;
+         font-size: 15px;
+     }
+
+     .venueeach {
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+         align-items: center;
+     }
+
+     .venuesfilter {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         width: 90%;
+
+     }
+
+     .venuesfilter2 {
+         background: #b9b5b5;
+         border-radius: 5px;
+     }
+
+     .venueinfoeach {
+         display: flex;
+         flex-direction: column;
+         width: 90%;
+         align-self: center;
+         margin-top: 10px;
+         text-align: center;
+         background: #b9b5b5;
+         border-radius: 5px;
+     }
+
+     .maps {
+         background: #dcdcdc;
+         border-radius: 5px;
+     }
+ }
+
+ /*iphone 5/ SE landscape*/
+ @media only screen and (min-width: 568px) and (max-device-height: 320px) {
+     body {
+         height: 100vh;
+         font-family: helvetica;
+         background-color: black;
+     }
+
+     .indexpage {
+         height: 100vh;
+         display: flex;
+         background-image: url("indexbackground.jpg");
+         background-size: contain;
+         background-repeat: no-repeat;
+     }
+
+     .allindexbuttons {
+         display: flex;
+         width: 100%;
+         flex-direction: column;
+         justify-content: center;
+         padding: 25px;
+     }
+
+     .mainbutton {
+         background: #6e0006;
+         height: 50px;
+         width: 100%;
+         color: white;
+         border-radius: 100px;
+         font-size: 20px;
+     }
+
+     .generalpage {
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: contain;
+         background-position: center;
+         background-repeat: no-repeat;
+         display: none;
+     }
+
+     .generalpage2 {
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: contain;
+         background-position: center;
+         background-repeat: no-repeat;
+         display: none;
+     }
+
+
+     .chatroom {
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: contain;
+         background-position: center;
+         background-repeat: no-repeat;
+         display: none;
+     }
+
+     .plzlog {
+         color: white;
+         border-radius: 8px;
+         background: #6e0006;
+     }
+
+     .plslog {
+         color: white;
+         display: flex;
+         width: 80%;
+         margin-top: 30px;
+         background: #b9b5b5;
+         border-radius: 50px;
+         padding: 20px;
+     }
+
+     .notlogged {
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+         align-items: center;
+     }
+
+     .headerz {
+         display: flex;
+         flex-direction: row;
+         width: 100%;
+         padding: 10px;
+     }
+
+     .chatroomz {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 100%;
+     }
+
+     .wholechat {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 100%;
+         background: #6e000685;
+         border-radius: 50px;
+         padding: 20px;
+     }
+
+     .chatbody {
+         width: 90%;
+         background: #b9b5b5;
+         border-radius: 5px;
+         height: 200px;
+         padding: 10px;
+         overflow-y: scroll;
+     }
+
+     .writein {
+         width: 80%;
+         border-radius: 10px;
+         margin-top: 10px;
+         height: 30px;
+     }
+
+     .sendin {
+         color: white;
+         background: #bab5b5;
+         margin-top: 2px;
+         border-radius: 20px;
+     }
+
+     .chatmessages {
+         display: flex;
+         flex-direction: column;
+     }
+
+     .me {
+         align-self: flex-end;
+         width: 90%;
+         text-align: end;
+         padding-right: 4px;
+         background: #7a2220;
+         color: #fff;
+         border-radius: 5px;
+     }
+
+     .guest {
+         align-self: flex-start;
+         text-align: start;
+         padding-left: 4px;
+         background: #eee;
+         width: 90%;
+         color: black;
+         border-radius: 5px;
+     }
+
+     .logoim {
+         width: 80px;
+         border-radius: 40px;
+     }
+
+     .headerz {
+         display: flex;
+         flex-direction: row;
+         padding: 10px;
+         justify-content: flex-end;
+     }
+
+     .logodiv {
+         display: flex;
+         flex-direction: column;
+         text-align: center;
+         font-size: 10px;
+         background-color: #bab5b5;
+         color: white;
+         border-radius: 20px;
+     }
+
+     .logo {
+         width: 100px;
+     }
+
+     .calendarpage {
+         flex-direction: column;
+     }
+
+     .searchgig {
+         display: flex;
+         justify-content: center;
+     }
+
+     .searcher {
+         width: 80%;
+         height: 30px;
+         margin-bottom: 5px;
+         border-radius: 50px;
+     }
+
+     .checkboxes {
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         width: 100%;
+         margin-top: 2px;
+         background: #b9b5b5;
+         border-radius: 20px;
+     }
+
+     .filterv {
+         width: 22px;
+     }
+
+     .scheduleperday {
+         display: flex;
+         flex-direction: column;
+         margin-top: 5px;
+     }
+
+     .datevfor {
+         display: flex;
+         justify-content: flex-start;
+         width: 30%;
+         font-size: 25px;
+         text-align: left;
+     }
+
+     .billnamevfor {
+         display: flex;
+         width: 70%;
+         font-size: 30px;
+         justify-content: center;
+     }
+
+     .gigs {
+         display: flex;
+         justify-content: center;
+         color: white;
+     }
+
+     .venuesmain {
+         display: flex;
+         align-items: center;
+         color: white;
+     }
+
+     #pointer {
+         width: 90%;
+         position: relative;
+         background: #7a2220;
+         border-radius: 10px;
+         display: flex;
+         font-size: 17px;
+         margin-top: 5px;
+     }
+
+     #venuepointer {
+         width: 140px;
+         height: 50px;
+         position: relative;
+         background: #7a2220;
+         border-radius: 10px;
+         display: flex;
+         justify-content: center;
+         font-size: 20px;
+     }
+
+     #pointer:after {
+         content: "";
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         width: 0;
+         height: 0;
+         border-left: 20px solid transparent;
+         border-top: 20px solid transparent;
+         border-bottom: 20px solid transparent;
+     }
+
+     #venuepointer:after {
+         content: "";
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         width: 0;
+         height: 0;
+         border-left: 20px solid transparent;
+         border-top: 20px solid transparent;
+         border-bottom: 20px solid transparent;
+     }
+
+     #pointer:before {
+         content: "";
+         position: absolute;
+         right: -20px;
+         bottom: 0;
+         width: 0;
+         height: 0;
+         border-left: 20px solid white;
+         border-top: 20px solid transparent;
+         border-bottom: 20px solid transparent;
+     }
+
+     #venuepointer:before {
+         content: "";
+         position: absolute;
+         right: -20px;
+         bottom: 0;
+         width: 0;
+         height: 0;
+         border-left: 20px solid white;
+         border-top: 20px solid transparent;
+         border-bottom: 20px solid transparent;
+     }
+
+     .notvariable2 {
+         display: none;
+         flex-direction: column;
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: contain;
+         background-position: center;
+         background-repeat: no-repeat;
+     }
+
+     .notvariable1 {
+         display: none;
+         flex-direction: column;
+         height: 100vh;
+         flex-direction: column;
+         background-image: url("generalbackground.jpg");
+         background-size: contain;
+         background-position: center;
+         background-repeat: no-repeat;
+     }
+
+     .backbutton {
+         display: flex;
+         border-radius: 10px;
+         margin-bottom: 5px;
+         align-self: flex-end;
+         background: #b9b5b5;
+     }
+
+     .backbuttonv {
+         display: flex;
+         justify-content: flex-start;
+         width: 100%;
+     }
+
+     .backb {
+         height: 70px;
+         width: 70px;
+         background: #b9b5b5;
+         border-radius: 25px;
+     }
+
+     .bills {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
+
+     .dsbill {
+         width: 50%;
+         background: #6e0006;
+         color: white;
+         border-radius: 50px;
+         text-align: center;
+         font-size: 20px;
+     }
+
+     .bill {
+         display: flex;
+         flex-direction: column;
+         width: 90%;
+         align-self: center;
+         margin-top: 10px;
+         text-align: center;
+         background: #b9b5b5;
+         border-radius: 60px;
+         font-size: 25px;
+     }
+
+     .venueeach {
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+         align-items: center;
+     }
+
+     .venuesfilter {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         width: 90%;
+         font-size: 20px;
+
+     }
+
+     .venuesfilter2 {
+         background: #b9b5b5;
+         border-radius: 5px;
+     }
+
+     .venueinfoeach {
+         display: flex;
+         flex-direction: column;
+         width: 90%;
+         align-self: center;
+         margin-top: 20px;
+         text-align: center;
+         background: #b9b5b5;
+         border-radius: 5px;
+         font-size: 20px;
+     }
+
+     .maps {
+         background: #dcdcdc;
+         border-radius: 5px;
+         height: 400px;
+     }
+
+ }
