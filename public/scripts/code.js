@@ -17,7 +17,7 @@ var app = new Vue({
     methods: {
 
         calljson: function () {
-            fetch("https://api.myjson.com/bins/n3kj2", {
+            fetch("https://tibbz.github.io/Data/churchofcat.geojson", {
                 method: "GET",
 
             }).then(function (response) {
